@@ -26,14 +26,16 @@ function Upload_Button() {
         height: '50vh',
         
       }}>
+      
       <input
+        
         type="file"
         accept="application/pdf"
         ref={fileInputRef}
         onChange={handleFileChange}
         style={{ display: 'none' }}  // Hide the actual file input
       />
-      <button className="button" onClick={handleButtonClick}>Upload PDF</button>
+      <button className="button cursor-pointer" onClick={handleButtonClick} >Upload PDF</button>
     </div>
   );
 }

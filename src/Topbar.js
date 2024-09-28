@@ -13,9 +13,9 @@ function Topbar() {
             </div>
         </div>
         <div className='width-max'>
-            <h1 className= "cursor-pointer">Home</h1>
-            <h1 className= "cursor-pointer">Jobs</h1>
-            <h1 className= "cursor-pointer">About</h1>
+            <h2 className= "cursor-pointer">Home</h2>
+            <h2 className= "cursor-pointer">Jobs</h2>
+            <h2 className= "cursor-pointer">About</h2>
         </div>
     </div>
     </>

@@ -6,7 +6,6 @@ function App() {
   return (
    <> 
    <Topbar/>
-   
    <Upload_Button/>
    <Job_preview/>
    

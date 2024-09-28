@@ -19,7 +19,7 @@
 .full-width{ 
   width:100vw;
 }
-.width-max > h1{ 
+.width-max > h2{ 
   margin-left: 1rem;
 }
 
@@ -69,5 +69,6 @@
 }
 
 .background-home{ 
-  background-image:url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-business-people-recruiting-horses-for-job-hunting-cartoon-childlike-background-image_144205.jpg');
+  background-image:url('https://tbcdn.talentbrew.com/company/45483/cms/page/job/plume.png');
+  background-position:center top ;
 }
