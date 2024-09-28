@@ -1,7 +1,7 @@
 .top-container{ 
   margin:0px;
   background-color: #FEF7FF ;
-  height: 120px;
+  height: 100px;
   width:100%;
 }
 
@@ -9,14 +9,10 @@
   padding:10px;
 }
 .width-max{ 
-  padding:10px;
-  text-align: center;
-  
-  
  
   display: flex;
-  margin-left:50px;
-  align-items: center;
+
+  margin-left:-5px
   
 }
 
@@ -52,6 +48,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-flex;
+  border-radius: 20px;
   font-size: 16px;
 }
 
@@ -61,4 +58,16 @@
 
 .box-shadow{ 
   box-shadow: 2px 5px 2.5px rgba(0, 0, 0, 0.433);
+}
+
+.home-page-jobs{ 
+  background-color: #FEF7FF;
+}
+
+.home-page-jobs:hover{ 
+  background-color: #c0bcc1;
+}
+
+.background-home{ 
+  background-image:url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-business-people-recruiting-horses-for-job-hunting-cartoon-childlike-background-image_144205.jpg');
 }
