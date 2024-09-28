@@ -1,0 +1,72 @@
+/* Styling for the main header */
+h2 {
+    margin-left: 25px;
+  }
+  
+  /* Adjusting the width of the job list */
+  .list-width {
+    max-width: 500px;
+    margin-left: 25px;
+  }
+  
+  /* Container for the entire jobs section */
+  .jobs-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Left side: Scrollable list of jobs */
+  .jobs-list {
+    width: 30%;
+    max-height: 100%;
+    overflow-y: auto; /* Enables vertical scrolling */
+    margin-left: 25px; /* Keep margin-left from your template */
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  /* Remove bullets and adjust spacing for the list of jobs */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  /* Styling for job titles */
+  li h3 {
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for links */
+  li a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  /* Center section: Selected job details */
+  .job-details {
+    width: 70%;
+    padding-left: 20px;
+  }
+  
+  /* Optional view job button or link */
+  .view-job {
+    width: 250px;
+  }
+  
+  /* Job details heading margin */
+  .job-details h2 {
+    margin-top: 0;
+  }
+  
+  /* Hover effect for list items */
+  .jobs-list li:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
