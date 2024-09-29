@@ -11,7 +11,8 @@ function Jobs() {
   };
 
   return (
-    <Topbar></Topbar>,
+   <div>
+    <Topbar/>,
     <div className="jobs-container">
       {/* Left Side: Scrollable Job List */}
       <div className="jobs-list list-width">
@@ -47,6 +48,7 @@ function Jobs() {
           <p>Please select a job to view details.</p>
         )}
       </div>
+    </div>
     </div>
   );
 }
