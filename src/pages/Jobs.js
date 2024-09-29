@@ -3,7 +3,7 @@ import { arrayOfJobs } from '../Job_preview'; // Assuming this is the correct pa
 import '../Jobs.css'; // Import the CSS file
 import Topbar from '../Topbar';
 
-function Jobs() {
+function Jobs({ai_gen_jobs}) {
   const [selectedJob, setSelectedJob] = useState(null); // State for selected job
 
   const handleJobClick = (job) => {
@@ -12,18 +12,18 @@ function Jobs() {
 
   return (
    <div>
-    <Topbar/>,
-    <div className="jobs-container">
+    {console.log(ai_gen_jobs)}
+      <div className="jobs-container">
       {/* Left Side: Scrollable Job List */}
       <div className="jobs-list list-width">
         <h2>Available Jobs</h2>
         <ul>
-          {arrayOfJobs.map((job) => (
+          {ai_gen_jobs && ai_gen_jobs.map((job) => (
             <li key={job.id} onClick={() => handleJobClick(job)}>
               <h3>{job.title}</h3>
               <p><strong>Company:</strong> {job.company}</p>
               <p><strong>Location:</strong> {job.location}</p>
-              <p><strong>Type:</strong> {job.type}</p>
+              <p><strong>Type:</strong> {job.role}</p>
               <p><strong>Salary:</strong> {job.salary}</p>
               <a href={job.url} target="_blank" rel="noopener noreferrer">View Job</a>
             </li>
@@ -38,9 +38,9 @@ function Jobs() {
             <h2>{selectedJob.title}</h2>
             <p><strong>Company:</strong> {selectedJob.company}</p>
             <p><strong>Location:</strong> {selectedJob.location}</p>
-            <p><strong>Type:</strong> {selectedJob.type}</p>
+            <p><strong>Type:</strong> {selectedJob.role}</p>
             <p><strong>Salary:</strong> {selectedJob.salary}</p>
-            <p><strong>Description:</strong> {selectedJob.description}</p>
+            <p><strong>Description:</strong> {selectedJob.job_description}</p>
             <p><strong>Posted Date:</strong> {selectedJob.posted_date}</p>
             <a href={selectedJob.url} target="_blank" rel="noopener noreferrer">Apply Here</a>
           </>

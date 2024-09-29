@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import {uploadFile} from './services/fetchData'
 
 
-function Upload_Button() {
+function Upload_Button({setIndexOfComp, set_ai_gen_jobs}) {
   const fileInputRef = useRef(null);
 
   const handleButtonClick = () => {
@@ -16,6 +16,10 @@ function Upload_Button() {
     if (file && file.type === 'application/pdf') {
       formDataObj.append('file', file);
       const response = await uploadFile(formDataObj);
+      const data = await response.json();
+      set_ai_gen_jobs(data?.Jobs);
+      setIndexOfComp(3);
+      
       
     } else {
       alert('Please select a valid PDF file.');

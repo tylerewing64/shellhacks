@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-function Topbar() {
+function Topbar({setIndexOfComp}) {
   return (
   <>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -13,9 +13,9 @@ function Topbar() {
             </div>
         </div>
         <div className='width-max'>
-            <h2 className= "cursor-pointer"> <a href = '/'>Home</a></h2>
-            <h2 className= "cursor-pointer" >< a href = '/.pages/Jobs'>Jobs</a></h2>
-            <h2 className= "cursor-pointer"><a href = '/.pages/About'>About</a></h2>
+            <h2 className= "cursor-pointer color-white" onClick={() => setIndexOfComp(0)}>Home</h2>
+            <h2 className= "cursor-pointer color-white" onClick={() => setIndexOfComp(3)}>Jobs</h2>
+            <h2 className= "cursor-pointer color-white" onClick={() => setIndexOfComp(2)}>About</h2>
         </div>
     </div>
     </>
