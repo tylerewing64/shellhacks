@@ -7,7 +7,7 @@ const About = () => {
     <div className="about-container">
       <Topbar></Topbar>
       <h1>About Us</h1>
-      <img src='https://media.istockphoto.com/id/1460172015/photo/businessmen-making-handshake-with-partner-greeting-dealing-merger-and-acquisition-business.jpg?s=612x612&w=0&k=20&c=IyQrIahedSW3WKsHSNsqtvX8dnzI1augnrtRrVeN3Dw='></img>
+      <img className = 'b-img' src='https://media.istockphoto.com/id/1460172015/photo/businessmen-making-handshake-with-partner-greeting-dealing-merger-and-acquisition-business.jpg?s=612x612&w=0&k=20&c=IyQrIahedSW3WKsHSNsqtvX8dnzI1augnrtRrVeN3Dw='></img>
       <p>
         Welcome to our job matching platform, where we help you find the best job opportunities tailored specifically to your skills and experience. Our mission is to streamline your job search by providing you with personalized job recommendations that perfectly align with your resume.
       </p>
