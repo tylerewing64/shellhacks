@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 function Topbar() {
   return (
   <>
@@ -13,9 +13,9 @@ function Topbar() {
             </div>
         </div>
         <div className='width-max'>
-            <h2 className= "cursor-pointer">Home</h2>
-            <h2 className= "cursor-pointer">Jobs</h2>
-            <h2 className= "cursor-pointer">About</h2>
+            <h2 className= "cursor-pointer"> <a href = '/'>Home</a></h2>
+            <h2 className= "cursor-pointer" >< a href = '/.pages/Jobs'>Jobs</a></h2>
+            <h2 className= "cursor-pointer"><a href = '/.pages/About'>About</a></h2>
         </div>
     </div>
     </>
