@@ -1,13 +1,18 @@
 
-const {createTempFilePath} = require( '../services/handleFileUploadService')
+const {createTempFilePath, parsePdf} = require( '../services/handleFileUploadService')
+const { compareJobs } = require('../services/chatCompletionService');
 const handleUpload = async(req, res) => {  
 
-    const response = createTempFilePath(req.files.file);
-    
-    if(response === true){ 
-        return res.status(200).send('file received');
+    try{ 
+        await createTempFilePath(req.files.file);
+        const pdfData = await parsePdf(req.files.file.name)
+        const response = await compareJobs(pdfData);
+        res.status(200).json(response);
+    }catch(error){ 
+        res.status(500).send('fail');
     }
-        return res.status(500).send('Error reading file')
+    
+ 
     
 }
 

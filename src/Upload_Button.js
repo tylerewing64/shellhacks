@@ -1,17 +1,22 @@
 import React, { useRef } from 'react';
+import {uploadFile} from './services/fetchData'
+
 
 function Upload_Button() {
   const fileInputRef = useRef(null);
 
   const handleButtonClick = () => {
-    fileInputRef.current.click();  // Trigger the hidden file input
+    fileInputRef.current.click(); 
+    
   };
 
-  const handleFileChange = (event) => {
+  const handleFileChange = async(event) => {
     const file = event.target.files[0];
+    const formDataObj = new FormData();
     if (file && file.type === 'application/pdf') {
-      console.log('File selected:', file); 
-      // Here, you can handle the file upload logic, such as sending it to a server.
+      formDataObj.append('file', file);
+      const response = await uploadFile(formDataObj);
+      
     } else {
       alert('Please select a valid PDF file.');
     }
